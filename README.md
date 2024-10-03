@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real time quiz website
+
+This real-time quiz application, built with **Next.js**, **Socket.io** and **Prisma**, offers real time communication.It shows a leaderboard with the highest ratings and gives you the chance to compete with others.
+
+## Table of Contents
+
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Getting Started](#getting-started)
+4. [Installation](#installation)
+5. [Configuration](#configuration)
+6. [Running the Project](#running-the-project)
+7. [Folder Structure](#folder-structure)
+8. [Contributing](#contributing)
+9. [License](#license)
+
+## Features
+- **Answer Question**: Answer questions in real time.
+- **Competition**: Compete with people around the world.
+- **View Leaderboard**: View people who are ahead of you.
+- **Save Info**: Preserve information for future games.
+- **Improve Skills**: Improve logical reasoning.
+  
+## Sample Image: 
+
+<div style="display: flex; justify-content: space-between;">
+  
+![image](https://github.com/user-attachments/assets/8100c004-fdec-4fd4-a63d-5dd2e497dd6c)
+
+</div>
+
+## Tech Stack
+
+- **Next.js**
+- **TypeScript**
+- **Socket.io**
+- **Prisma**
+- **PostgreSQL**
+- **Tailwind CSS**
 
 ## Getting Started
 
-First, run the development server:
+Follow the instructions below to set up the project locally on your machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Prerequisites
+
+- **Node.js** (v16 or later): [Download Node.js](https://nodejs.org/)
+- **Git**: [Download Git](https://git-scm.com/)
+- **PostgreSQL**: [Install PostgreSQL](https://www.postgresql.org/download/) (Not Necessary)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/centauricoder01/real-time-quiz-website.git
+   
+2. **Navigate to the project directory:**
+   ```bash
+   cd real-time-quiz-website
+
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+### Configuration
+
+Create a `.env` file in the root directory of your project and add the following environment variables:
+
+  ```bash
+ DATABASE_URL=postgresql://user:password@localhost:5432/quiz-website
+ NEXT_PUBLIC_APP_URL="http://localhost:3000"
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running Migrations
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  ```bash
+   npx prisma migrate dev
+  ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Running the Project
 
-## Learn More
+  ```bash
+    npm run dev
+  ```
 
-To learn more about Next.js, take a look at the following resources:
+### Build for production:
+  ```bash
+    npm run build
+  ```
+### Folder Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  ```ruby
+ai-plagiarism-detector/
+├── public/         # Static assets
+├── src/            # Source files
+│   ├── app/
+        ├── api/     #All APIs
+        ├── other_page/     #Other Pages
+│   ├── components/  # Reusable components
+│   ├── hooks/      # custom hooks
+│   └── libs/      # Utility functions
+├── .env.local      # Environment variables
+├── next.config.js  # Next.js configuration
+├── package.json    # Dependencies and scripts
+├── README.md       # Project documentation
+└── tsconfig.json   # TypeScript configuration
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are welcome.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Fork the repository**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   Go to the repository on GitHub and click the "Fork" button at the top right corner.
+
+2. **Create a feature branch**:
+
+   ```bash
+   git checkout -b feature-name
+
+3. ***Commit your changes**:
+     ```bash
+     git commit -m 'Add some feature'
+     
+4. **Push to the branch**:
+     ```bash
+     git push origin feature-name
+     ```
+
+## Thank you for your contribution! If you found this project helpful, please consider giving it a star ⭐.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
